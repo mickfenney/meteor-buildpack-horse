@@ -5,9 +5,9 @@
 #
 
 # fail fast.
-#set -e
+set -e
 # debug verbosely.
-set -x
+#set -x
 
 echo "----> STARTING BUILDPACK FOR METEOR..."
 
@@ -145,6 +145,9 @@ if [ -z "$METEOR_NPM" ] || [ -z "$METEOR_NODE" ] ; then
   echo "FATAL: Can't find npm/node within meteor bundle. This is a bug. Please open an issue at https://github.com/AdmitHub/meteor-buildpack-horse.";
   exit 1
 fi
+
+METEOR_NPM="/app/tmp/cache/1.5.4.1/.meteor/packages/meteor-tool/.1.5.4_1.t5xc5w++os.linux.x86_64+web.browser+web.cordova/mt-os.linux.x86_64/dev_bundle/bin/npm"
+METEOR_NODE="/app/tmp/cache/1.5.4.1/.meteor/packages/meteor-tool/.1.5.4_1.t5xc5w++os.linux.x86_64+web.browser+web.cordova/mt-os.linux.x86_64/dev_bundle/bin/node"
 
 # Copy node into place for production.
 NODE="$COMPILE_DIR"/bin/node
