@@ -145,8 +145,8 @@ if [ -z "$METEOR_NPM" ] || [ -z "$METEOR_NODE" ] ; then
 fi
 
 # Hard code the npm/node if the if you have a mismatch
-#METEOR_NPM="/app/tmp/cache/1.5.4.1/.meteor/packages/meteor-tool/.1.5.4_1.t5xc5w++os.linux.x86_64+web.browser+web.cordova/mt-os.linux.x86_64/dev_bundle/bin/npm"
-#METEOR_NODE="/app/tmp/cache/1.5.4.1/.meteor/packages/meteor-tool/.1.5.4_1.t5xc5w++os.linux.x86_64+web.browser+web.cordova/mt-os.linux.x86_64/dev_bundle/bin/node"
+METEOR_NPM="/app/tmp/cache/1.5.4.1/.meteor/packages/meteor-tool/.1.5.4_1.t5xc5w++os.linux.x86_64+web.browser+web.cordova/mt-os.linux.x86_64/dev_bundle/bin/npm"
+METEOR_NODE="/app/tmp/cache/1.5.4.1/.meteor/packages/meteor-tool/.1.5.4_1.t5xc5w++os.linux.x86_64+web.browser+web.cordova/mt-os.linux.x86_64/dev_bundle/bin/node"
 
 # Copy node into place for production.
 NODE="$COMPILE_DIR"/bin/node
